@@ -62,7 +62,7 @@ abstract class Kohana_Controller_Template_Twig extends Controller
 		if ($this->auto_render)
 		{
 			// Auto-render the template
-			$this->request->response = $this->template;
+			$this->response->body($this->template);
 		}
 
 		return parent::after();
